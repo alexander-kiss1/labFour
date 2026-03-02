@@ -22,7 +22,7 @@ class LibraryServiceTest {
 
         ResourceRepository repo = mock(ResourceRepository.class);
         EmailProvider email = mock(EmailProvider.class);
-        LibraryService service = new LibraryService(email, repo); // IMPORTANT: correct order
+        LibraryService service = new LibraryService(email, repo);
 
         UUID id = parseResourceId(resourceIdText);
 
