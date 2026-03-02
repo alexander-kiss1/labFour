@@ -1,0 +1,8 @@
+TestID,TestName,resourceId,memberEmail,Repository Setup,Email Setup,Expected Result
+TC1.1,Null Resource ID,null,a@b.com,None,None,Return false
+TC1.2,Resource Not Available,Valid UUID,a@b.com,isAvailable=false,None,Return false
+TC1.3,Successful Checkout,Valid UUID,a@b.com,isAvailable=true; checkout=true,sendEmail=true,Return true
+TC1.4,Update Returns False,Valid UUID,a@b.com,isAvailable=true; checkout=false,None,Throw ResourceUpdateException
+TC1.5,Update Throws Exception,Valid UUID,a@b.com,isAvailable=true; checkout throws exception,None,Throw ResourceUpdateException
+TC1.6,Email Returns False,Valid UUID,a@b.com,isAvailable=true; checkout=true,sendEmail=false,Throw EmailSendException
+TC1.7,Email Throws Exception,Valid UUID,a@b.com,isAvailable=true; checkout=true,sendEmail throws exception,Throw EmailSendException

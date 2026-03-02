@@ -1,0 +1,6 @@
+RuleID,resourceId Null?,Resource Available?,Update Successful?,Email Successful?,Expected Outcome
+DT1.1,Yes,-,-,-,Return false
+DT1.2,No,No,-,-,Return false
+DT1.3,No,Yes,Yes,Yes,Return true
+DT1.4,No,Yes,No,-,Throw ResourceUpdateException
+DT1.5,No,Yes,Yes,No,Throw EmailSendException

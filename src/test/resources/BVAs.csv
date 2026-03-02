@@ -1,0 +1,6 @@
+TestID,Input Variable,Boundary Condition,Test Value,Expected Result
+BVA1.1,resourceId,Null Boundary,null,Return false
+BVA1.2,resourceId,First Valid Value,Random UUID,Proceed to availability check
+BVA1.3,memberEmail,Empty String Boundary,,Depends on EmailProvider 
+BVA1.4,memberEmail,Minimum Practical Length,a@b.com,Normal processing
+BVA1.5,memberEmail,Maximum Typical Length (254 chars),254-character email string,Normal processing unless EmailProvider rejects
